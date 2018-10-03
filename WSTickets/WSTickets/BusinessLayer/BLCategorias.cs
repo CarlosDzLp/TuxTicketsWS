@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -22,7 +22,7 @@ namespace WSTickets.BusinessLayer
                     categoria.Descripcion = item.Descripcion;
                     categoria.IdCategoria = item.IdCategoria;
                     categoria.Nombre = item.Nombre;
-                    categoria.UrlImagen = item.Nombre;
+                    categoria.UrlImagen = item.UrlImagen;
                     ListCategoria.Add(categoria);
                 }
             }
