@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TicketsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Categorias">
+    <Key>
+      <PropertyRef Name="IdCategoria" />
+    </Key>
+    <Property Name="IdCategoria" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Descripcion" Type="text" Nullable="false" />
+    <Property Name="UrlImagen" Type="text" Nullable="false" />
+  </EntityType>
+  <EntityType Name="HistorialUsuarioTickets">
+    <Key>
+      <PropertyRef Name="IdHistorial" />
+    </Key>
+    <Property Name="IdHistorial" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IdUsuario" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IdSubCategoria" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SubCategorias">
+    <Key>
+      <PropertyRef Name="IdSubCategoria" />
+    </Key>
+    <Property Name="IdSubCategoria" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IdCategoria" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Descripcion" Type="text" Nullable="false" />
+    <Property Name="UrlImagen" Type="text" Nullable="false" />
+    <Property Name="PrecioNormal" Type="smallmoney" Nullable="false" />
+    <Property Name="PrecioDescuento" Type="smallmoney" Nullable="false" />
+    <Property Name="CodigoDescuento" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="IdUsuario" />
+    </Key>
+    <Property Name="IdUsuario" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Apellidos" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Sexo" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Correo" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Contrasena" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="TipoLogin" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="UrlImagen" Type="text" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__Historial__IdSub__5165187F">
+    <End Role="SubCategorias" Type="Self.SubCategorias" Multiplicity="1" />
+    <End Role="HistorialUsuarioTickets" Type="Self.HistorialUsuarioTickets" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SubCategorias">
+        <PropertyRef Name="IdSubCategoria" />
+      </Principal>
+      <Dependent Role="HistorialUsuarioTickets">
+        <PropertyRef Name="IdSubCategoria" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Historial__IdSub__5FB337D6">
+    <End Role="SubCategorias" Type="Self.SubCategorias" Multiplicity="1" />
+    <End Role="HistorialUsuarioTickets" Type="Self.HistorialUsuarioTickets" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SubCategorias">
+        <PropertyRef Name="IdSubCategoria" />
+      </Principal>
+      <Dependent Role="HistorialUsuarioTickets">
+        <PropertyRef Name="IdSubCategoria" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Historial__IdUsu__5070F446">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="HistorialUsuarioTickets" Type="Self.HistorialUsuarioTickets" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="HistorialUsuarioTickets">
+        <PropertyRef Name="IdUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Historial__IdUsu__60A75C0F">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="HistorialUsuarioTickets" Type="Self.HistorialUsuarioTickets" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="HistorialUsuarioTickets">
+        <PropertyRef Name="IdUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SubCatego__IdCat__4D94879B">
+    <End Role="Categorias" Type="Self.Categorias" Multiplicity="1" />
+    <End Role="SubCategorias" Type="Self.SubCategorias" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Categorias">
+        <PropertyRef Name="IdCategoria" />
+      </Principal>
+      <Dependent Role="SubCategorias">
+        <PropertyRef Name="IdCategoria" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SubCatego__IdCat__619B8048">
+    <End Role="Categorias" Type="Self.Categorias" Multiplicity="1" />
+    <End Role="SubCategorias" Type="Self.SubCategorias" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Categorias">
+        <PropertyRef Name="IdCategoria" />
+      </Principal>
+      <Dependent Role="SubCategorias">
+        <PropertyRef Name="IdCategoria" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="spInsAddHistorial" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdUsuario" Type="uniqueidentifier" Mode="In" />
+    <Parameter Name="IdSubCategoria" Type="uniqueidentifier" Mode="In" />
+  </Function>
+  <Function Name="spInsCategoria" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdCategoria" Type="uniqueidentifier" Mode="In" />
+    <Parameter Name="Nombre" Type="varchar" Mode="In" />
+    <Parameter Name="Descripcion" Type="text" Mode="In" />
+    <Parameter Name="UrlImage" Type="text" Mode="In" />
+  </Function>
+  <Function Name="spInsertUsuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Nombre" Type="varchar" Mode="In" />
+    <Parameter Name="Apellidos" Type="varchar" Mode="In" />
+    <Parameter Name="Sexo" Type="varchar" Mode="In" />
+    <Parameter Name="Correo" Type="varchar" Mode="In" />
+    <Parameter Name="Contrasena" Type="varchar" Mode="In" />
+    <Parameter Name="TipoLogin" Type="varchar" Mode="In" />
+    <Parameter Name="UrlImage" Type="text" Mode="In" />
+  </Function>
+  <Function Name="spInsHistorialUsuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdUsuario" Type="uniqueidentifier" Mode="In" />
+    <Parameter Name="IdSubCategoria" Type="uniqueidentifier" Mode="In" />
+  </Function>
+  <Function Name="spInsSubCategoria" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdCategoria" Type="uniqueidentifier" Mode="In" />
+    <Parameter Name="Nombre" Type="varchar" Mode="In" />
+    <Parameter Name="Descripcion" Type="text" Mode="In" />
+    <Parameter Name="UrlImage" Type="text" Mode="In" />
+    <Parameter Name="PrecioNormal" Type="smallmoney" Mode="In" />
+    <Parameter Name="PrecioDescuento" Type="smallmoney" Mode="In" />
+    <Parameter Name="CodigoDescuento" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spSelCategorias" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="spSelHistorialUsuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdUsuario" Type="uniqueidentifier" Mode="In" />
+  </Function>
+  <Function Name="spSelSubCategorias" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdCategoria" Type="uniqueidentifier" Mode="In" />
+  </Function>
+  <Function Name="spSelUsuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Correo" Type="varchar" Mode="In" />
+    <Parameter Name="Contrasena" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spUpdateUsuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdUsaurio" Type="uniqueidentifier" Mode="In" />
+    <Parameter Name="Nombre" Type="varchar" Mode="In" />
+    <Parameter Name="Apellidos" Type="varchar" Mode="In" />
+    <Parameter Name="Sexo" Type="varchar" Mode="In" />
+    <Parameter Name="Correo" Type="varchar" Mode="In" />
+    <Parameter Name="Contrasena" Type="varchar" Mode="In" />
+    <Parameter Name="TipoLogin" Type="varchar" Mode="In" />
+    <Parameter Name="UrlImage" Type="text" Mode="In" />
+  </Function>
+  <EntityContainer Name="TicketsModelStoreContainer">
+    <EntitySet Name="Categorias" EntityType="Self.Categorias" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HistorialUsuarioTickets" EntityType="Self.HistorialUsuarioTickets" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SubCategorias" EntityType="Self.SubCategorias" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__Historial__IdSub__5165187F" Association="Self.FK__Historial__IdSub__5165187F">
+      <End Role="SubCategorias" EntitySet="SubCategorias" />
+      <End Role="HistorialUsuarioTickets" EntitySet="HistorialUsuarioTickets" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Historial__IdSub__5FB337D6" Association="Self.FK__Historial__IdSub__5FB337D6">
+      <End Role="SubCategorias" EntitySet="SubCategorias" />
+      <End Role="HistorialUsuarioTickets" EntitySet="HistorialUsuarioTickets" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Historial__IdUsu__5070F446" Association="Self.FK__Historial__IdUsu__5070F446">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="HistorialUsuarioTickets" EntitySet="HistorialUsuarioTickets" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Historial__IdUsu__60A75C0F" Association="Self.FK__Historial__IdUsu__60A75C0F">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="HistorialUsuarioTickets" EntitySet="HistorialUsuarioTickets" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SubCatego__IdCat__4D94879B" Association="Self.FK__SubCatego__IdCat__4D94879B">
+      <End Role="Categorias" EntitySet="Categorias" />
+      <End Role="SubCategorias" EntitySet="SubCategorias" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SubCatego__IdCat__619B8048" Association="Self.FK__SubCatego__IdCat__619B8048">
+      <End Role="Categorias" EntitySet="Categorias" />
+      <End Role="SubCategorias" EntitySet="SubCategorias" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

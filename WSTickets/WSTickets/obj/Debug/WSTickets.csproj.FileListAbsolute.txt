@@ -49,6 +49,8 @@ C:\Users\CarlosDiazZz\Documents\Visual Studio 2017\Projects\WSTickets\WSTickets\
 C:\Users\CarlosDiazZz\Documents\Visual Studio 2017\Projects\WSTickets\WSTickets\bin\roslyn\VBCSCompiler.exe
 C:\Users\CarlosDiazZz\Documents\Visual Studio 2017\Projects\WSTickets\WSTickets\bin\roslyn\VBCSCompiler.exe.config
 C:\Users\CarlosDiazZz\Documents\Visual Studio 2017\Projects\WSTickets\WSTickets\bin\Antlr3.Runtime.dll
+C:\Users\CarlosDiazZz\Documents\Visual Studio 2017\Projects\WSTickets\WSTickets\bin\CapaNegocios.dll
+C:\Users\CarlosDiazZz\Documents\Visual Studio 2017\Projects\WSTickets\WSTickets\bin\EntityFramework.dll
 C:\Users\CarlosDiazZz\Documents\Visual Studio 2017\Projects\WSTickets\WSTickets\bin\Microsoft.AI.Agent.Intercept.dll
 C:\Users\CarlosDiazZz\Documents\Visual Studio 2017\Projects\WSTickets\WSTickets\bin\Microsoft.AI.DependencyCollector.dll
 C:\Users\CarlosDiazZz\Documents\Visual Studio 2017\Projects\WSTickets\WSTickets\bin\Microsoft.AI.PerfCounterCollector.dll
@@ -71,7 +73,13 @@ C:\Users\CarlosDiazZz\Documents\Visual Studio 2017\Projects\WSTickets\WSTickets\
 C:\Users\CarlosDiazZz\Documents\Visual Studio 2017\Projects\WSTickets\WSTickets\bin\System.Web.WebPages.Deployment.dll
 C:\Users\CarlosDiazZz\Documents\Visual Studio 2017\Projects\WSTickets\WSTickets\bin\System.Web.WebPages.dll
 C:\Users\CarlosDiazZz\Documents\Visual Studio 2017\Projects\WSTickets\WSTickets\bin\System.Web.WebPages.Razor.dll
+C:\Users\CarlosDiazZz\Documents\Visual Studio 2017\Projects\WSTickets\WSTickets\bin\ViewModels.dll
 C:\Users\CarlosDiazZz\Documents\Visual Studio 2017\Projects\WSTickets\WSTickets\bin\WebGrease.dll
+C:\Users\CarlosDiazZz\Documents\Visual Studio 2017\Projects\WSTickets\WSTickets\bin\CapaDatos.dll
+C:\Users\CarlosDiazZz\Documents\Visual Studio 2017\Projects\WSTickets\WSTickets\bin\CapaNegocios.pdb
+C:\Users\CarlosDiazZz\Documents\Visual Studio 2017\Projects\WSTickets\WSTickets\bin\CapaNegocios.dll.config
+C:\Users\CarlosDiazZz\Documents\Visual Studio 2017\Projects\WSTickets\WSTickets\bin\ViewModels.pdb
+C:\Users\CarlosDiazZz\Documents\Visual Studio 2017\Projects\WSTickets\WSTickets\bin\EntityFramework.xml
 C:\Users\CarlosDiazZz\Documents\Visual Studio 2017\Projects\WSTickets\WSTickets\bin\Newtonsoft.Json.xml
 C:\Users\CarlosDiazZz\Documents\Visual Studio 2017\Projects\WSTickets\WSTickets\bin\System.Net.Http.Formatting.xml
 C:\Users\CarlosDiazZz\Documents\Visual Studio 2017\Projects\WSTickets\WSTickets\bin\System.Web.Helpers.xml
@@ -90,6 +98,8 @@ C:\Users\CarlosDiazZz\Documents\Visual Studio 2017\Projects\WSTickets\WSTickets\
 C:\Users\CarlosDiazZz\Documents\Visual Studio 2017\Projects\WSTickets\WSTickets\bin\Microsoft.AI.WindowsServer.xml
 C:\Users\CarlosDiazZz\Documents\Visual Studio 2017\Projects\WSTickets\WSTickets\bin\Microsoft.AI.Web.xml
 C:\Users\CarlosDiazZz\Documents\Visual Studio 2017\Projects\WSTickets\WSTickets\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\CarlosDiazZz\Documents\Visual Studio 2017\Projects\WSTickets\WSTickets\bin\CapaDatos.pdb
+C:\Users\CarlosDiazZz\Documents\Visual Studio 2017\Projects\WSTickets\WSTickets\bin\CapaDatos.dll.config
 C:\Users\CarlosDiazZz\Documents\Visual Studio 2017\Projects\WSTickets\WSTickets\bin\es\System.Net.Http.Formatting.resources.dll
 C:\Users\CarlosDiazZz\Documents\Visual Studio 2017\Projects\WSTickets\WSTickets\bin\es\System.Web.Helpers.resources.dll
 C:\Users\CarlosDiazZz\Documents\Visual Studio 2017\Projects\WSTickets\WSTickets\bin\es\System.Web.Http.resources.dll
@@ -105,7 +115,6 @@ C:\Users\CarlosDiazZz\Documents\Visual Studio 2017\Projects\WSTickets\WSTickets\
 C:\Users\CarlosDiazZz\Documents\Visual Studio 2017\Projects\WSTickets\WSTickets\obj\Debug\WSTickets.csproj.CopyComplete
 C:\Users\CarlosDiazZz\Documents\Visual Studio 2017\Projects\WSTickets\WSTickets\obj\Debug\WSTickets.dll
 C:\Users\CarlosDiazZz\Documents\Visual Studio 2017\Projects\WSTickets\WSTickets\obj\Debug\WSTickets.pdb
-C:\Users\CarlosDiazZz\Documents\Visual Studio 2017\Projects\WSTickets\WSTickets\bin\EntityFramework.dll
+C:\Users\CarlosDiazZz\Documents\Visual Studio 2017\Projects\WSTickets\WSTickets\bin\System.Data.SqlClient.dll
 C:\Users\CarlosDiazZz\Documents\Visual Studio 2017\Projects\WSTickets\WSTickets\bin\EntityFramework.SqlServer.dll
-C:\Users\CarlosDiazZz\Documents\Visual Studio 2017\Projects\WSTickets\WSTickets\bin\EntityFramework.xml
 C:\Users\CarlosDiazZz\Documents\Visual Studio 2017\Projects\WSTickets\WSTickets\bin\EntityFramework.SqlServer.xml

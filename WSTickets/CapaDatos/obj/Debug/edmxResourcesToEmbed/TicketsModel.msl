@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TicketsModelStoreContainer" CdmEntityContainer="TicketsEntities">
+    <EntitySetMapping Name="Categorias">
+      <EntityTypeMapping TypeName="TicketsModel.Categorias">
+        <MappingFragment StoreEntitySet="Categorias">
+          <ScalarProperty Name="IdCategoria" ColumnName="IdCategoria" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="UrlImagen" ColumnName="UrlImagen" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HistorialUsuarioTickets">
+      <EntityTypeMapping TypeName="TicketsModel.HistorialUsuarioTickets">
+        <MappingFragment StoreEntitySet="HistorialUsuarioTickets">
+          <ScalarProperty Name="IdHistorial" ColumnName="IdHistorial" />
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+          <ScalarProperty Name="IdSubCategoria" ColumnName="IdSubCategoria" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SubCategorias">
+      <EntityTypeMapping TypeName="TicketsModel.SubCategorias">
+        <MappingFragment StoreEntitySet="SubCategorias">
+          <ScalarProperty Name="IdSubCategoria" ColumnName="IdSubCategoria" />
+          <ScalarProperty Name="IdCategoria" ColumnName="IdCategoria" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="UrlImagen" ColumnName="UrlImagen" />
+          <ScalarProperty Name="PrecioNormal" ColumnName="PrecioNormal" />
+          <ScalarProperty Name="PrecioDescuento" ColumnName="PrecioDescuento" />
+          <ScalarProperty Name="CodigoDescuento" ColumnName="CodigoDescuento" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usuario">
+      <EntityTypeMapping TypeName="TicketsModel.Usuario">
+        <MappingFragment StoreEntitySet="Usuario">
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Apellidos" ColumnName="Apellidos" />
+          <ScalarProperty Name="Sexo" ColumnName="Sexo" />
+          <ScalarProperty Name="Correo" ColumnName="Correo" />
+          <ScalarProperty Name="Contrasena" ColumnName="Contrasena" />
+          <ScalarProperty Name="TipoLogin" ColumnName="TipoLogin" />
+          <ScalarProperty Name="UrlImagen" ColumnName="UrlImagen" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="spInsAddHistorial" FunctionName="TicketsModel.Store.spInsAddHistorial" />
+    <FunctionImportMapping FunctionImportName="spInsCategoria" FunctionName="TicketsModel.Store.spInsCategoria" />
+    <FunctionImportMapping FunctionImportName="spInsertUsuario" FunctionName="TicketsModel.Store.spInsertUsuario" />
+    <FunctionImportMapping FunctionImportName="spInsHistorialUsuario" FunctionName="TicketsModel.Store.spInsHistorialUsuario" />
+    <FunctionImportMapping FunctionImportName="spInsSubCategoria" FunctionName="TicketsModel.Store.spInsSubCategoria" />
+    <FunctionImportMapping FunctionImportName="spSelCategorias" FunctionName="TicketsModel.Store.spSelCategorias">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TicketsModel.spSelCategorias_Result">
+          <ScalarProperty Name="IdCategoria" ColumnName="IdCategoria" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="UrlImagen" ColumnName="UrlImagen" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spSelHistorialUsuario" FunctionName="TicketsModel.Store.spSelHistorialUsuario">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TicketsModel.spSelHistorialUsuario_Result">
+          <ScalarProperty Name="IdSubCategoria" ColumnName="IdSubCategoria" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="UrlImagen" ColumnName="UrlImagen" />
+          <ScalarProperty Name="PrecioNormal" ColumnName="PrecioNormal" />
+          <ScalarProperty Name="PrecioDescuento" ColumnName="PrecioDescuento" />
+          <ScalarProperty Name="CodigoDescuento" ColumnName="CodigoDescuento" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spSelSubCategorias" FunctionName="TicketsModel.Store.spSelSubCategorias">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TicketsModel.spSelSubCategorias_Result">
+          <ScalarProperty Name="IdSubCategoria" ColumnName="IdSubCategoria" />
+          <ScalarProperty Name="IdCategoria" ColumnName="IdCategoria" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="UrlImagen" ColumnName="UrlImagen" />
+          <ScalarProperty Name="PrecioNormal" ColumnName="PrecioNormal" />
+          <ScalarProperty Name="PrecioDescuento" ColumnName="PrecioDescuento" />
+          <ScalarProperty Name="CodigoDescuento" ColumnName="CodigoDescuento" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spSelUsuario" FunctionName="TicketsModel.Store.spSelUsuario">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TicketsModel.spSelUsuario_Result">
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Apellidos" ColumnName="Apellidos" />
+          <ScalarProperty Name="Sexo" ColumnName="Sexo" />
+          <ScalarProperty Name="Correo" ColumnName="Correo" />
+          <ScalarProperty Name="Contrasena" ColumnName="Contrasena" />
+          <ScalarProperty Name="TipoLogin" ColumnName="TipoLogin" />
+          <ScalarProperty Name="UrlImagen" ColumnName="UrlImagen" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spUpdateUsuario" FunctionName="TicketsModel.Store.spUpdateUsuario" />
+  </EntityContainerMapping>
+</Mapping>

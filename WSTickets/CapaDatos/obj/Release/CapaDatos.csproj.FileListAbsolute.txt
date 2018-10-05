@@ -1,0 +1,11 @@
+C:\Users\CarlosDiazZz\Documents\Visual Studio 2017\Projects\WSTickets\CapaDatos\bin\Release\CapaDatos.dll.config
+C:\Users\CarlosDiazZz\Documents\Visual Studio 2017\Projects\WSTickets\CapaDatos\bin\Release\CapaDatos.dll
+C:\Users\CarlosDiazZz\Documents\Visual Studio 2017\Projects\WSTickets\CapaDatos\bin\Release\CapaDatos.pdb
+C:\Users\CarlosDiazZz\Documents\Visual Studio 2017\Projects\WSTickets\CapaDatos\bin\Release\EntityFramework.dll
+C:\Users\CarlosDiazZz\Documents\Visual Studio 2017\Projects\WSTickets\CapaDatos\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\CarlosDiazZz\Documents\Visual Studio 2017\Projects\WSTickets\CapaDatos\bin\Release\EntityFramework.xml
+C:\Users\CarlosDiazZz\Documents\Visual Studio 2017\Projects\WSTickets\CapaDatos\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\CarlosDiazZz\Documents\Visual Studio 2017\Projects\WSTickets\CapaDatos\obj\Release\CapaDatos.csproj.CoreCompileInputs.cache
+C:\Users\CarlosDiazZz\Documents\Visual Studio 2017\Projects\WSTickets\CapaDatos\obj\Release\CapaDatos.csproj.CopyComplete
+C:\Users\CarlosDiazZz\Documents\Visual Studio 2017\Projects\WSTickets\CapaDatos\obj\Release\CapaDatos.dll
+C:\Users\CarlosDiazZz\Documents\Visual Studio 2017\Projects\WSTickets\CapaDatos\obj\Release\CapaDatos.pdb

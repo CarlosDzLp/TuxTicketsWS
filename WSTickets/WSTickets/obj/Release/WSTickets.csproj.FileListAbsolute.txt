@@ -108,3 +108,13 @@ C:\Users\CarlosDiazZz\Documents\Visual Studio 2017\Projects\WSTickets\WSTickets\
 C:\Users\CarlosDiazZz\Documents\Visual Studio 2017\Projects\WSTickets\WSTickets\obj\Release\WSTickets.csproj.CopyComplete
 C:\Users\CarlosDiazZz\Documents\Visual Studio 2017\Projects\WSTickets\WSTickets\obj\Release\WSTickets.dll
 C:\Users\CarlosDiazZz\Documents\Visual Studio 2017\Projects\WSTickets\WSTickets\obj\Release\WSTickets.pdb
+C:\Users\CarlosDiazZz\Documents\Visual Studio 2017\Projects\WSTickets\WSTickets\obj\Release\WSTickets.csprojAssemblyReference.cache
+C:\Users\CarlosDiazZz\Documents\Visual Studio 2017\Projects\WSTickets\WSTickets\bin\CapaNegocios.dll
+C:\Users\CarlosDiazZz\Documents\Visual Studio 2017\Projects\WSTickets\WSTickets\bin\System.Data.SqlClient.dll
+C:\Users\CarlosDiazZz\Documents\Visual Studio 2017\Projects\WSTickets\WSTickets\bin\ViewModels.dll
+C:\Users\CarlosDiazZz\Documents\Visual Studio 2017\Projects\WSTickets\WSTickets\bin\CapaDatos.dll
+C:\Users\CarlosDiazZz\Documents\Visual Studio 2017\Projects\WSTickets\WSTickets\bin\CapaNegocios.pdb
+C:\Users\CarlosDiazZz\Documents\Visual Studio 2017\Projects\WSTickets\WSTickets\bin\CapaNegocios.dll.config
+C:\Users\CarlosDiazZz\Documents\Visual Studio 2017\Projects\WSTickets\WSTickets\bin\ViewModels.pdb
+C:\Users\CarlosDiazZz\Documents\Visual Studio 2017\Projects\WSTickets\WSTickets\bin\CapaDatos.pdb
+C:\Users\CarlosDiazZz\Documents\Visual Studio 2017\Projects\WSTickets\WSTickets\bin\CapaDatos.dll.config

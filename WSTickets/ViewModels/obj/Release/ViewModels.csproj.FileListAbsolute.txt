@@ -1,0 +1,6 @@
+C:\Users\CarlosDiazZz\Documents\Visual Studio 2017\Projects\WSTickets\ViewModels\bin\Release\ViewModels.dll
+C:\Users\CarlosDiazZz\Documents\Visual Studio 2017\Projects\WSTickets\ViewModels\bin\Release\ViewModels.pdb
+C:\Users\CarlosDiazZz\Documents\Visual Studio 2017\Projects\WSTickets\ViewModels\obj\Release\ViewModels.csprojAssemblyReference.cache
+C:\Users\CarlosDiazZz\Documents\Visual Studio 2017\Projects\WSTickets\ViewModels\obj\Release\ViewModels.csproj.CoreCompileInputs.cache
+C:\Users\CarlosDiazZz\Documents\Visual Studio 2017\Projects\WSTickets\ViewModels\obj\Release\ViewModels.dll
+C:\Users\CarlosDiazZz\Documents\Visual Studio 2017\Projects\WSTickets\ViewModels\obj\Release\ViewModels.pdb

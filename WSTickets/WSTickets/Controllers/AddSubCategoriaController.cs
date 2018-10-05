@@ -5,8 +5,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.UI.WebControls;
-using WSTickets.BusinessLayer;
-using WSTickets.ViewModels;
+using CapaNegocios;
+using ViewModels;
 
 namespace WSTickets.Controllers
 {

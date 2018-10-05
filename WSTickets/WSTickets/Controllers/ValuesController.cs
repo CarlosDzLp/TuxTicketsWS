@@ -10,7 +10,7 @@ namespace WSTickets.Controllers
     public class ValuesController : ApiController
     {
         // GET api/values
-        public IEnumerable<string> Get()
+        public IEnumerable<string> GetValores()
         {
             return new string[] { "value1", "value2" };
         }

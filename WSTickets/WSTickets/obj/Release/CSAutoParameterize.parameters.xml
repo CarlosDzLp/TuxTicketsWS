@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <parameters>
-  <parameter name="TicketsEntities-Web.config Connection String" description="TicketsEntities Cadena de conexión que usa la aplicación en web.config para obtener acceso a la base de datos." defaultValue="metadata=res://*/Models.TicketsModel.csdl|res://*/Models.TicketsModel.ssdl|res://*/Models.TicketsModel.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=serverdiaz.database.windows.net;initial catalog=Tickets;persist security info=True;user id=diaz;password=Libelula90#;MultipleActiveResultSets=True;App=EntityFramework&quot;" tags="SqlConnectionString">
+  <parameter name="TicketsEntities-Web.config Connection String" description="TicketsEntities Cadena de conexión que usa la aplicación en web.config para obtener acceso a la base de datos." defaultValue="metadata=res://*/TicketsModel.csdl|res://*/TicketsModel.ssdl|res://*/TicketsModel.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=serverdiaz.database.windows.net;initial catalog=Tickets;persist security info=True;user id=diaz;password=Libelula90#;multipleactiveresultsets=True;application name=EntityFramework&quot;" tags="SqlConnectionString">
     <parameterEntry kind="XmlFile" scope="C:\\Users\\CarlosDiazZz\\Documents\\Visual\ Studio\ 2017\\Projects\\WSTickets\\WSTickets\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='TicketsEntities']/@connectionString" />
   </parameter>
 </parameters>

@@ -1,0 +1,248 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TicketsModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Categorias">
+    <Key>
+      <PropertyRef Name="IdCategoria" />
+    </Key>
+    <Property Name="IdCategoria" Type="Guid" Nullable="false" />
+    <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Descripcion" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="UrlImagen" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="SubCategorias" Relationship="Self.FK__SubCatego__IdCat__4D94879B" FromRole="Categorias" ToRole="SubCategorias" />
+    <NavigationProperty Name="SubCategorias1" Relationship="Self.FK__SubCatego__IdCat__619B8048" FromRole="Categorias" ToRole="SubCategorias" />
+  </EntityType>
+  <EntityType Name="HistorialUsuarioTickets">
+    <Key>
+      <PropertyRef Name="IdHistorial" />
+    </Key>
+    <Property Name="IdHistorial" Type="Guid" Nullable="false" />
+    <Property Name="IdUsuario" Type="Guid" Nullable="false" />
+    <Property Name="IdSubCategoria" Type="Guid" Nullable="false" />
+    <NavigationProperty Name="SubCategorias" Relationship="Self.FK__Historial__IdSub__5165187F" FromRole="HistorialUsuarioTickets" ToRole="SubCategorias" />
+    <NavigationProperty Name="SubCategorias1" Relationship="Self.FK__Historial__IdSub__5FB337D6" FromRole="HistorialUsuarioTickets" ToRole="SubCategorias" />
+    <NavigationProperty Name="Usuario" Relationship="Self.FK__Historial__IdUsu__5070F446" FromRole="HistorialUsuarioTickets" ToRole="Usuario" />
+    <NavigationProperty Name="Usuario1" Relationship="Self.FK__Historial__IdUsu__60A75C0F" FromRole="HistorialUsuarioTickets" ToRole="Usuario" />
+  </EntityType>
+  <EntityType Name="SubCategorias">
+    <Key>
+      <PropertyRef Name="IdSubCategoria" />
+    </Key>
+    <Property Name="IdSubCategoria" Type="Guid" Nullable="false" />
+    <Property Name="IdCategoria" Type="Guid" Nullable="false" />
+    <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Descripcion" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="UrlImagen" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PrecioNormal" Type="Decimal" Precision="10" Scale="4" Nullable="false" />
+    <Property Name="PrecioDescuento" Type="Decimal" Precision="10" Scale="4" Nullable="false" />
+    <Property Name="CodigoDescuento" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Categorias" Relationship="Self.FK__SubCatego__IdCat__4D94879B" FromRole="SubCategorias" ToRole="Categorias" />
+    <NavigationProperty Name="Categorias1" Relationship="Self.FK__SubCatego__IdCat__619B8048" FromRole="SubCategorias" ToRole="Categorias" />
+    <NavigationProperty Name="HistorialUsuarioTickets" Relationship="Self.FK__Historial__IdSub__5165187F" FromRole="SubCategorias" ToRole="HistorialUsuarioTickets" />
+    <NavigationProperty Name="HistorialUsuarioTickets1" Relationship="Self.FK__Historial__IdSub__5FB337D6" FromRole="SubCategorias" ToRole="HistorialUsuarioTickets" />
+  </EntityType>
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="IdUsuario" />
+    </Key>
+    <Property Name="IdUsuario" Type="Guid" Nullable="false" />
+    <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Apellidos" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Sexo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Correo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Contrasena" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TipoLogin" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="UrlImagen" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="HistorialUsuarioTickets" Relationship="Self.FK__Historial__IdUsu__5070F446" FromRole="Usuario" ToRole="HistorialUsuarioTickets" />
+    <NavigationProperty Name="HistorialUsuarioTickets1" Relationship="Self.FK__Historial__IdUsu__60A75C0F" FromRole="Usuario" ToRole="HistorialUsuarioTickets" />
+  </EntityType>
+  <Association Name="FK__SubCatego__IdCat__4D94879B">
+    <End Role="Categorias" Type="Self.Categorias" Multiplicity="1" />
+    <End Role="SubCategorias" Type="Self.SubCategorias" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Categorias">
+        <PropertyRef Name="IdCategoria" />
+      </Principal>
+      <Dependent Role="SubCategorias">
+        <PropertyRef Name="IdCategoria" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SubCatego__IdCat__619B8048">
+    <End Role="Categorias" Type="Self.Categorias" Multiplicity="1" />
+    <End Role="SubCategorias" Type="Self.SubCategorias" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Categorias">
+        <PropertyRef Name="IdCategoria" />
+      </Principal>
+      <Dependent Role="SubCategorias">
+        <PropertyRef Name="IdCategoria" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Historial__IdSub__5165187F">
+    <End Role="SubCategorias" Type="Self.SubCategorias" Multiplicity="1" />
+    <End Role="HistorialUsuarioTickets" Type="Self.HistorialUsuarioTickets" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SubCategorias">
+        <PropertyRef Name="IdSubCategoria" />
+      </Principal>
+      <Dependent Role="HistorialUsuarioTickets">
+        <PropertyRef Name="IdSubCategoria" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Historial__IdSub__5FB337D6">
+    <End Role="SubCategorias" Type="Self.SubCategorias" Multiplicity="1" />
+    <End Role="HistorialUsuarioTickets" Type="Self.HistorialUsuarioTickets" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SubCategorias">
+        <PropertyRef Name="IdSubCategoria" />
+      </Principal>
+      <Dependent Role="HistorialUsuarioTickets">
+        <PropertyRef Name="IdSubCategoria" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Historial__IdUsu__5070F446">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="HistorialUsuarioTickets" Type="Self.HistorialUsuarioTickets" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="HistorialUsuarioTickets">
+        <PropertyRef Name="IdUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Historial__IdUsu__60A75C0F">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="HistorialUsuarioTickets" Type="Self.HistorialUsuarioTickets" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="HistorialUsuarioTickets">
+        <PropertyRef Name="IdUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="TicketsEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Categorias" EntityType="Self.Categorias" />
+    <EntitySet Name="HistorialUsuarioTickets" EntityType="Self.HistorialUsuarioTickets" />
+    <EntitySet Name="SubCategorias" EntityType="Self.SubCategorias" />
+    <EntitySet Name="Usuario" EntityType="Self.Usuario" />
+    <AssociationSet Name="FK__SubCatego__IdCat__4D94879B" Association="Self.FK__SubCatego__IdCat__4D94879B">
+      <End Role="Categorias" EntitySet="Categorias" />
+      <End Role="SubCategorias" EntitySet="SubCategorias" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SubCatego__IdCat__619B8048" Association="Self.FK__SubCatego__IdCat__619B8048">
+      <End Role="Categorias" EntitySet="Categorias" />
+      <End Role="SubCategorias" EntitySet="SubCategorias" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Historial__IdSub__5165187F" Association="Self.FK__Historial__IdSub__5165187F">
+      <End Role="SubCategorias" EntitySet="SubCategorias" />
+      <End Role="HistorialUsuarioTickets" EntitySet="HistorialUsuarioTickets" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Historial__IdSub__5FB337D6" Association="Self.FK__Historial__IdSub__5FB337D6">
+      <End Role="SubCategorias" EntitySet="SubCategorias" />
+      <End Role="HistorialUsuarioTickets" EntitySet="HistorialUsuarioTickets" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Historial__IdUsu__5070F446" Association="Self.FK__Historial__IdUsu__5070F446">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="HistorialUsuarioTickets" EntitySet="HistorialUsuarioTickets" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Historial__IdUsu__60A75C0F" Association="Self.FK__Historial__IdUsu__60A75C0F">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="HistorialUsuarioTickets" EntitySet="HistorialUsuarioTickets" />
+    </AssociationSet>
+    <FunctionImport Name="spInsAddHistorial">
+      <Parameter Name="IdUsuario" Mode="In" Type="Guid" />
+      <Parameter Name="IdSubCategoria" Mode="In" Type="Guid" />
+    </FunctionImport>
+    <FunctionImport Name="spInsCategoria">
+      <Parameter Name="IdCategoria" Mode="In" Type="Guid" />
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="Descripcion" Mode="In" Type="String" />
+      <Parameter Name="UrlImage" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spInsertUsuario">
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="Apellidos" Mode="In" Type="String" />
+      <Parameter Name="Sexo" Mode="In" Type="String" />
+      <Parameter Name="Correo" Mode="In" Type="String" />
+      <Parameter Name="Contrasena" Mode="In" Type="String" />
+      <Parameter Name="TipoLogin" Mode="In" Type="String" />
+      <Parameter Name="UrlImage" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spInsHistorialUsuario">
+      <Parameter Name="IdUsuario" Mode="In" Type="Guid" />
+      <Parameter Name="IdSubCategoria" Mode="In" Type="Guid" />
+    </FunctionImport>
+    <FunctionImport Name="spInsSubCategoria">
+      <Parameter Name="IdCategoria" Mode="In" Type="Guid" />
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="Descripcion" Mode="In" Type="String" />
+      <Parameter Name="UrlImage" Mode="In" Type="String" />
+      <Parameter Name="PrecioNormal" Mode="In" Type="Decimal" />
+      <Parameter Name="PrecioDescuento" Mode="In" Type="Decimal" />
+      <Parameter Name="CodigoDescuento" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spSelCategorias" ReturnType="Collection(TicketsModel.spSelCategorias_Result)" />
+    <FunctionImport Name="spSelHistorialUsuario" ReturnType="Collection(TicketsModel.spSelHistorialUsuario_Result)">
+      <Parameter Name="IdUsuario" Mode="In" Type="Guid" />
+    </FunctionImport>
+    <FunctionImport Name="spSelSubCategorias" ReturnType="Collection(TicketsModel.spSelSubCategorias_Result)">
+      <Parameter Name="IdCategoria" Mode="In" Type="Guid" />
+    </FunctionImport>
+    <FunctionImport Name="spSelUsuario" ReturnType="Collection(TicketsModel.spSelUsuario_Result)">
+      <Parameter Name="Correo" Mode="In" Type="String" />
+      <Parameter Name="Contrasena" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spUpdateUsuario">
+      <Parameter Name="IdUsaurio" Mode="In" Type="Guid" />
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="Apellidos" Mode="In" Type="String" />
+      <Parameter Name="Sexo" Mode="In" Type="String" />
+      <Parameter Name="Correo" Mode="In" Type="String" />
+      <Parameter Name="Contrasena" Mode="In" Type="String" />
+      <Parameter Name="TipoLogin" Mode="In" Type="String" />
+      <Parameter Name="UrlImage" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="spSelCategorias_Result">
+    <Property Type="Guid" Name="IdCategoria" Nullable="false" />
+    <Property Type="String" Name="Nombre" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="Max" />
+    <Property Type="String" Name="UrlImagen" Nullable="false" MaxLength="Max" />
+  </ComplexType>
+  <ComplexType Name="spSelHistorialUsuario_Result">
+    <Property Type="Guid" Name="IdSubCategoria" Nullable="false" />
+    <Property Type="String" Name="Nombre" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="Max" />
+    <Property Type="String" Name="UrlImagen" Nullable="false" MaxLength="Max" />
+    <Property Type="Decimal" Name="PrecioNormal" Nullable="false" Precision="10" />
+    <Property Type="Decimal" Name="PrecioDescuento" Nullable="false" Precision="10" />
+    <Property Type="Int32" Name="CodigoDescuento" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="spSelSubCategorias_Result">
+    <Property Type="Guid" Name="IdSubCategoria" Nullable="false" />
+    <Property Type="Guid" Name="IdCategoria" Nullable="false" />
+    <Property Type="String" Name="Nombre" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="Max" />
+    <Property Type="String" Name="UrlImagen" Nullable="false" MaxLength="Max" />
+    <Property Type="Decimal" Name="PrecioNormal" Nullable="false" Precision="10" />
+    <Property Type="Decimal" Name="PrecioDescuento" Nullable="false" Precision="10" />
+    <Property Type="Int32" Name="CodigoDescuento" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="spSelUsuario_Result">
+    <Property Type="Guid" Name="IdUsuario" Nullable="false" />
+    <Property Type="String" Name="Nombre" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Apellidos" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Sexo" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Correo" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Contrasena" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="TipoLogin" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="UrlImagen" Nullable="false" MaxLength="Max" />
+  </ComplexType>
+</Schema>
